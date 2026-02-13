@@ -2,18 +2,20 @@
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import CollectionPage from './pages/CollectionPage'
+import NavBar from './components/NavBar'
+
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
-    <div className='w-full bg-gray-950 text-white' >
-
+    <div className='w-full min-h-screen bg-gray-950 text-white' >
+<NavBar/>
 <Routes>
   <Route path='/' element={<HomePage/>} />
   <Route path='/collection' element={<CollectionPage/>}/>
-
-
 </Routes>
 
+<ToastContainer/>
 
     </div>
   )
